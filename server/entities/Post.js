@@ -16,11 +16,6 @@ const schema = new EntitySchema({
   class: Post,
   extends: "BaseEntity",
   properties: {
-    comments: {
-      reference: "1:m",
-      type: "Comment",
-      mappedBy: "postID",
-    },
     title: { type: "string" },
     author: { type: "string" },
     content: { type: "string" },
