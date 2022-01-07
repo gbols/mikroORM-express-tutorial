@@ -3,7 +3,6 @@ const { MikroORM, RequestContext } = require("@mikro-orm/core");
 
 const { initializeORM } = require("./bootstrap");
 const { PostController } = require("./controllers/post.controller");
-// const { CommentController } = require("./controllers/comment.controller");
 
 let port = process.env.PORT || 3000;
 
@@ -20,7 +19,6 @@ let port = process.env.PORT || 3000;
   });
 
   app.use("/api/posts", PostController(DI));
-  // app.use("/comments", CommentController(DI));
 
   app.get("*", (req, res) =>
     res
